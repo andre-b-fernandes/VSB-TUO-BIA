@@ -7,9 +7,12 @@ class Individual:
         self.fitness = self.calculate_fitness()
 
     def print_chromossomes(self):
-        print("My fitness : " + str(self.fitness))
+        self.print_fitness()
         for chro in self.chromossomes:
            chro.print()
+
+    def print_fitness(self):
+        print("My fitness:" + str(self.fitness))
 
     def calculate_fitness(self):
         fitness = self.chromossomes[0].distance(self.chromossomes[len(self.chromossomes) - 1]) # Last to the first
@@ -17,10 +20,14 @@ class Individual:
         for i in range(len(self.chromossomes) - 1):
             fitness += self.chromossomes[i].distance(self.chromossomes[i + 1])
         return fitness
+  
+    def set_bounds(self, last, total):
+        self.lower_bound = last
+        self.upper_bound = (self.fitness/total) + last
+        #self.print_bounds()
 
-    
-    def set_probability(self, probability):
-        self.probability = self.fitness/probability
+    def print_bounds(self):
+        print("Bounds: [" + str(self.lower_bound) + ", " + str(self.upper_bound) + "]")
 
     def crossover(self, individual):
         r = random.randint(0, len(self.chromossomes) - 1)
