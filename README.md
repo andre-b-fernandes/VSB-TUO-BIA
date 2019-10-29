@@ -15,3 +15,8 @@ Usage: `python main.py`
 Finding out all of the permutations of a sequence of numbers taking as input the size of the sequence.
 For instance `python main.py 2` will generate the sequence `01` and the permutations are `01` and `10`
 It also prints the time it took to calculate them all.
+
+## Diferential Evolution
+
+Finding out the global minima, for the test functions of the first and second seminars.
+Usage: `python main.py ackley 1000 100` where 1000 => iterations and 100 => population size.
