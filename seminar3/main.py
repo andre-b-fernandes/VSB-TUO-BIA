@@ -1,5 +1,6 @@
 from city import City
 from genetic_algorithm import GeneticAlgorithm
+from graph import build_graph
 
 import json, getopt, sys
 
@@ -16,4 +17,5 @@ with open('cities.json') as json_file:
     generic_algorithm = GeneticAlgorithm(cities)
     solution = generic_algorithm.algorithm(pop_size, n_iter)
     solution.print_chromossomes()
+    build_graph(solution)
     
