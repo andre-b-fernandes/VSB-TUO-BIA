@@ -1,6 +1,7 @@
 import json, getopt, sys, math
 from ant_colony_optimization import AntColonyOptimization
 
+
 def calculate_distance_matrix(cities):
     return [ [math.sqrt( ((city['x'] - another_city['x']) ** 2) + ((city['y'] - another_city['y']) ** 2) ) for another_city in cities] for city in cities ]
 
