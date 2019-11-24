@@ -1,0 +1,103 @@
+{
+    "cities": [{
+            "name": "Famalicao",
+            "x": 10,
+            "y": 10
+        },
+        {
+            "name": "Porto",
+            "x": 9,
+            "y": 5
+        },
+        {
+            "name": "Braga",
+            "x": 10,
+            "y": 3
+        },
+        {
+            "name": "Coimbra",
+            "x": 8,
+            "y": 15
+        },
+        {
+            "name": "Lisboa",
+            "x": 34,
+            "y": 8
+        },
+        {
+            "name": "Faro",
+            "x": 27,
+            "y": 33
+        },
+        {
+            "name": "Vila Real",
+            "x": 26,
+            "y": 28
+        },
+        {
+            "name": "Ovar",
+            "x": 22,
+            "y": 1
+        },
+        {
+            "name": "Evora",
+            "x": 0,
+            "y": 0
+        },
+        {
+            "name": "Funchal",
+            "x": 35,
+            "y": 14
+        },
+        {
+            "name": "Gaia",
+            "x": 5,
+            "y": 29
+        },
+        {
+            "name": "Almada",
+            "x": 30,
+            "y": 20
+        },
+        {
+            "name": "Tomar",
+            "x": 11,
+            "y": 19
+        },
+        {
+            "name": "Lagos",
+            "x": 28,
+            "y": 39
+        },
+        {
+            "name": "Maia",
+            "x": 40,
+            "y": 40
+        },
+        {
+            "name": "Cascais",
+            "x": 12,
+            "y": 25
+        },
+        {
+            "name": "Angra",
+            "x": 9,
+            "y": 24
+        },
+        {
+            "name": "Lamego",
+            "x": 50,
+            "y": 29
+        },
+        {
+            "name": "Beja",
+            "x": 8,
+            "y": 1
+        },
+        {
+            "name": "Figueira",
+            "x": 1,
+            "y": 40
+        }
+    ]
+}

@@ -20,8 +20,7 @@ class Soma:
             y_choice = random.choice(copy_y)
             copy_x.remove(x_choice)
             copy_y.remove(y_choice)
-            population.append((x_choice, y_choice, self.z(x_choice, y_choice)))   
-
+            population.append((x_choice, y_choice, self.z(x_choice, y_choice)))
         self.best = min(population, key= lambda x: x[len(x) - 1])
         return population
 
@@ -55,19 +54,3 @@ class Soma:
         for _i in range(0, self.number_iterations):
             pop = self.calculate_next_population(pop)
         return self.best
-
-        
-
-            
-        
-
-
-
-        
-        
-        
-    
-    
-    
-
-
