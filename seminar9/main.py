@@ -16,11 +16,13 @@ from mpl_toolkits.mplot3d import Axes3D
 import numpy as np
 
 from firefly_algorithm import FireflyAlgorithm
+from teaching_learning_based_optimization import TeachingLearningOptimization
 
 
 function_name = getopt.getopt(sys.argv[1:],"")[1][0]
-iterations = int(getopt.getopt(sys.argv[1:],"")[1][1])
-pop_size = int(getopt.getopt(sys.argv[1:],"")[1][2])
+algorithm_name = getopt.getopt(sys.argv[1:],"")[1][1]
+iterations = int(getopt.getopt(sys.argv[1:],"")[1][2])
+pop_size = int(getopt.getopt(sys.argv[1:],"")[1][3])
 
 function_mapping = {
     "ackley": ackley,
@@ -34,11 +36,16 @@ function_mapping = {
     "zakharov": zakharov
 }
 
+algorithm_mapping = {
+    "firefly": FireflyAlgorithm,
+    "tlbo": TeachingLearningOptimization
+}
+
 
 try:
     function = function_mapping[function_name]
-    firefly_algorithm = FireflyAlgorithm(function.X, function.Y, function.Z)
-    tup_min = firefly_algorithm.process(iterations, pop_size)
+    algorithm = algorithm_mapping[algorithm_name](function.X, function.Y, function.Z)
+    tup_min = algorithm.process(iterations, pop_size)
 
     print("Coordinates of x : " + str(tup_min[0]))
     print("Coordinates of y : " + str(tup_min[1]))
